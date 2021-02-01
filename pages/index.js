@@ -8,6 +8,7 @@ export default function Home() {
         <title>일기장</title>
       </Head>
       <div>일기</div>
+      <Link href="/diary"><a>달력</a></Link>
       <Link href="/diary"><a>일기 작성하기</a></Link>
     </>
   )
