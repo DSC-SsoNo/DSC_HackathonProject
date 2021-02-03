@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
+
 import format from 'date-fns/format';
+
 import styled from 'styled-components';
+
 import PacmanLoader from 'react-spinners/PacmanLoader';
+
 import { Editor } from 'react-draft-wysiwyg';
 import { EditorState, convertToRaw } from 'draft-js';
+
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+
+import ATag from './components/Button';
+
+import Link from 'next/link';
 
 const ContentWrapper = styled.div`
   display: flex;
@@ -119,8 +128,10 @@ const NewDiary = () => {
   const currentMonth = format(new Date(), 'MM');
   const currentDate = format(new Date(), 'd');
 
-  // let contentState = editorState.getCurrentContent();
-  // let originalDiaryText = convertToRaw(contentState);
+  let contentState = editorState.getCurrentContent();
+  let originalDiaryText = convertToRaw(contentState);
+
+  console.log(originalDiaryText);
 
   // const todayDiary = {
   //   creator: userData._id,
@@ -135,49 +146,53 @@ const NewDiary = () => {
   };
 
   return (
-    <ContentWrapper>
-      <LeftBlockWrapper>
-      </LeftBlockWrapper>
-      <RightBlockWrapper >
-        {
-          isLoading &&
-          <div className='loading_box'>
-            <div className='loading_indicator'>
-              <PacmanLoader
-                size={100}
-                color={'#E4D097'}
-                loading={isLoading}
-              />
+    <>
+      <Link href="/"><ATag>달력</ATag></Link>
+      <ContentWrapper>
+        <LeftBlockWrapper>
+        </LeftBlockWrapper>
+        <RightBlockWrapper >
+          {
+            isLoading &&
+            <div className='loading_box'>
+              <div className='loading_indicator'>
+                <PacmanLoader
+                  size={100}
+                  color={'#E4D097'}
+                  loading={isLoading}
+                />
+              </div>
+              <div className='loading_text'>
+                <span>😇 일기를 저장하고있어요 😇 </span>
+              </div>
             </div>
-            <div className='loading_text'>
-              <span>😇 일기를 저장하고있어요 😇 </span>
-            </div>
+          }
+          <DiaryWrapper>
+            <div className='title_box'>
+              {currentYear}년 {currentMonth}월 {currentDate}일 일기장
           </div>
-        }
-        <DiaryWrapper>
-          <div className='title_box'>
-            {currentYear}년 {currentMonth}월 {currentDate}일 일기장
-          </div>
-          <Editor
-            wrapperClassName='wrapper-class'
-            editorClassName='editor'
-            toolbarClassName='toolbar-class'
-            toolbar={{
-              list: { inDropdown: true },
-              textAlign: { inDropdown: true },
-              link: { inDropdown: true },
-              history: { inDropdown: false }
-            }}
-            placeholder='내용을 작성해주세요.'
-            localization={{
-              locale: 'ko'
-            }}
-            editorState={editorState}
-            onEditorStateChange={onEditorStateChange}
-          />
-        </DiaryWrapper>
-      </RightBlockWrapper>
-    </ContentWrapper>
+            <Editor
+              wrapperClassName='wrapper-class'
+              editorClassName='editor'
+              toolbarClassName='toolbar-class'
+              toolbar={{
+                list: { inDropdown: true },
+                textAlign: { inDropdown: true },
+                link: { inDropdown: true },
+                history: { inDropdown: false }
+              }}
+              placeholder='내용을 작성해주세요.'
+              localization={{
+                locale: 'ko'
+              }}
+              editorState={editorState}
+              onEditorStateChange={onEditorStateChange}
+            />
+            <ATag>일기 등록하기</ATag>
+          </DiaryWrapper>
+        </RightBlockWrapper>
+      </ContentWrapper>
+    </>
   );
 };
 

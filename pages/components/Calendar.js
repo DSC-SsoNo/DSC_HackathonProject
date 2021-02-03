@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
+import Router from 'next/router';
+
 import {
   format,
   addDays,
@@ -121,6 +123,8 @@ const CalendarBody = styled.div`
 `;
 
 const Calendar = () => {
+  const [diaryList, setDiaryList] = useState([]);
+
   const [date, setDate] = useState(new Date());
 
   const sevenDays = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
@@ -139,7 +143,6 @@ const Calendar = () => {
     const nextMonth = getMonth(changedDate);
 
     setDate(new Date(nextYear, nextMonth));
-    requestDiaryList(userToken, nextYear, nextMonth);
   };
 
   const minusMonth = () => {
@@ -148,9 +151,7 @@ const Calendar = () => {
     const previousYear = getYear(changedDate);
     const previousMonth = getMonth(changedDate);
 
-    setList([]);
     setDate(new Date(previousYear, previousMonth));
-    requestDiaryList(userToken, previousYear, previousMonth);
   };
 
   return (
@@ -190,6 +191,8 @@ const Calendar = () => {
                       let currentYear = getYear(nextDate);
                       let showingDate = showingMonthInHeader === currentMonth ? `${processedDate}` : '';
 
+                      let dateDiary = diaryList.find(item => item.date === showingDate);
+                      console.log(dateDiary);
                       let todayYear = getYear(new Date());
                       let todayMonth = getMonth(new Date());
                       let todayDate = getDate(new Date());
@@ -198,12 +201,13 @@ const Calendar = () => {
                       return (
                         <div
                           className={`date_box ${todaySelector}`}
+                          key={dateIndex}
                           onClick={() => {
-                            history.push({
-                              pathname: `/detail/${dateDiary._id}`,
-                              state: {
-                                originDiary: `${dateDiary.details}`,
-                                fantasiaDiary: `${dateDiary.fantasia_diary_id.details}`,
+                            Router.push({
+                              pathname: `/detail`,
+                              query: {
+                                originDiary: `Hello`,
+                                fantasiaDiary: `Hi`,
                                 year: currentYear,
                                 month: currentMonth + 1,
                                 date: processedDate
