@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { withRouter } from 'next/router';
 
-import { EditorState, Editor, convertFromRaw } from 'draft-js';
+import { Editor, convertFromRaw } from 'draft-js';
+
+import { useSelector } from 'react-redux';
 
 import styled from 'styled-components';
 
 const Detail = ({ router }) => {
-  const [isShowingButtonClicked, setIsShowingButtonClicked] = useState(false);
+  const { editorState } = useSelector((state) => ({
+    editorState: state.editorState,
+  }));
 
+  console.log(`This is editor STATE : ${JSON.stringify(editorState)}`);
 
   const showingDiaryYear = router.query.year;
   const showingDiaryMonth = router.query.month;
@@ -16,8 +21,9 @@ const Detail = ({ router }) => {
 
   console.log(showingDiaryYear, showingDiaryMonth, showingDiaryDate, router.query.originDiary, router.query.fantasiaDiary)
 
-  // const originDiaryText = JSON.parse(router.query.originDiary);
-  // const fantasiaDiaryText = JSON.parse(router.query.fantasiaDiary);
+  const originDiaryText = JSON.parse(editorState);
+
+  console.log(originDiaryText);
 
   const originContentState = convertFromRaw(originDiaryText);
   const originEditorState = EditorState.createWithContent(originContentState);
