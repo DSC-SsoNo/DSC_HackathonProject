@@ -1,13 +1,13 @@
 const initialState = {
-  name: "일기장",
+  editorState: {},
 }
 
-const rootReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "CHANGE_NICKNAME":
+const rootReducer = (state = initialState, { payload, type }) => {
+  switch (type) {
+    case "SET_EDITORSTATE":
       return {
         ...state,
-        name: action.data,
+        editorState: payload.editorState,
       }
   }
 }

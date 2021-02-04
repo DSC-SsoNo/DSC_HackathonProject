@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
+import { useSelector } from 'react-redux';
+
 import Router from 'next/router';
 
 import {
@@ -125,6 +127,10 @@ const CalendarBody = styled.div`
 const Calendar = () => {
   const [diaryList, setDiaryList] = useState([]);
 
+  const editorState = useSelector(state => state.editorState);
+
+  console.log(editorState);
+
   const [date, setDate] = useState(new Date());
 
   const sevenDays = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
@@ -192,7 +198,6 @@ const Calendar = () => {
                       let showingDate = showingMonthInHeader === currentMonth ? `${processedDate}` : '';
 
                       let dateDiary = diaryList.find(item => item.date === showingDate);
-                      console.log(dateDiary);
                       let todayYear = getYear(new Date());
                       let todayMonth = getMonth(new Date());
                       let todayDate = getDate(new Date());

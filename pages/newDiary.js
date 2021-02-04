@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import PacmanLoader from 'react-spinners/PacmanLoader';
 
 import { Editor } from 'react-draft-wysiwyg';
+
 import { EditorState, convertToRaw } from 'draft-js';
 
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
@@ -14,6 +15,12 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import ATag from './components/Button';
 
 import Link from 'next/link';
+
+import { useDispatch } from 'react-redux';
+
+import { setEditor } from '../actions/index.js';
+
+import Router from 'next/router';
 
 const ContentWrapper = styled.div`
   display: flex;
@@ -121,17 +128,14 @@ const DiaryWrapper = styled.div`
 `;
 
 const NewDiary = () => {
+  const dispatch = useDispatch();
+
   const [isLoading, setIsLoading] = useState(false);
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
 
   const currentYear = format(new Date(), 'yyyy');
   const currentMonth = format(new Date(), 'MM');
   const currentDate = format(new Date(), 'd');
-
-  let contentState = editorState.getCurrentContent();
-  let originalDiaryText = convertToRaw(contentState);
-
-  console.log(originalDiaryText);
 
   // const todayDiary = {
   //   creator: userData._id,
@@ -144,6 +148,16 @@ const NewDiary = () => {
   const onEditorStateChange = editorState => {
     setEditorState(editorState);
   };
+
+  function handleRegister() {
+    let contentState = editorState.getCurrentContent();
+    let originalDiaryText = convertToRaw(contentState);
+    console.log(originalDiaryText);
+
+    dispatch(setEditor({ editorState: originalDiaryText }));
+
+    Router.push('/');
+  }
 
   return (
     <>
@@ -188,7 +202,9 @@ const NewDiary = () => {
               editorState={editorState}
               onEditorStateChange={onEditorStateChange}
             />
-            <ATag>일기 등록하기</ATag>
+            <ATag
+              onClick={handleRegister}
+            >일기 등록하기</ATag>
           </DiaryWrapper>
         </RightBlockWrapper>
       </ContentWrapper>
