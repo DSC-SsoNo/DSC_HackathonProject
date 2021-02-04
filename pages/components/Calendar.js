@@ -127,7 +127,7 @@ const CalendarBody = styled.div`
 const Calendar = () => {
   const [diaryList, setDiaryList] = useState([]);
 
-  const editorState = useSelector(state => state.editorState);
+  const { editorState } = useSelector((state) => state.user);
 
   console.log(editorState);
 

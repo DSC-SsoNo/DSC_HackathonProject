@@ -1,15 +1,21 @@
-const initialState = {
-  editorState: {},
-}
+import { HYDRATE } from 'next-redux-wrapper';
 
-const rootReducer = (state = initialState, { payload, type }) => {
-  switch (type) {
-    case "SET_EDITORSTATE":
-      return {
-        ...state,
-        editorState: payload.editorState,
-      }
+import { combineReducers } from 'redux';
+
+import user from './user';
+
+const rootReducer = (state, action) => {
+  switch (action.type) {
+    case HYDRATE:
+      console.log('HYDRATE', action);
+      return action.payload;
+    default: {
+      const combinedReducer = combineReducers({
+        user,
+      });
+      return combinedReducer(state, action);
+    }
   }
-}
+};
 
 export default rootReducer;
