@@ -125,11 +125,7 @@ const Detail = ({ router }) => {
   const showingDiaryMonth = router.query.month;
   const showingDiaryDate = router.query.date;
 
-  console.log(showingDiaryYear, showingDiaryMonth, showingDiaryDate, router.query.originDiary, router.query.fantasiaDiary)
-
   const originDiaryText = JSON.parse(JSON.stringify(editorState));
-
-  console.log(originDiaryText);
 
   const originContentState = convertFromRaw(originDiaryText);
   const originEditorState = EditorState.createWithContent(originContentState);

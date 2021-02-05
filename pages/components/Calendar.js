@@ -211,8 +211,6 @@ const Calendar = () => {
                             Router.push({
                               pathname: `/detail`,
                               query: {
-                                originDiary: `Hello`,
-                                fantasiaDiary: `Hi`,
                                 year: currentYear,
                                 month: currentMonth + 1,
                                 date: processedDate
