@@ -2,37 +2,136 @@ import React from 'react';
 
 import { withRouter } from 'next/router';
 
-import { Editor, convertFromRaw } from 'draft-js';
+import { Editor, EditorState, convertFromRaw } from 'draft-js';
 
 import { useSelector } from 'react-redux';
 
 import styled from 'styled-components';
 
-const Detail = ({ router }) => {
-  const { editorState } = useSelector((state) => ({
-    editorState: state.editorState,
-  }));
+const ContentWrapper = styled.div`
+  display: flex;
+  height: 100vh;
+`;
 
-  console.log(`This is editor STATE : ${JSON.stringify(editorState)}`);
+const LeftBlockWrapper = styled.div`
+  display: flex;
+  height: 100%;
+  width: 11.1%;
+`;
+
+const RightBlockWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .fantasiaDiary_box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    .fantasiaDiary_title {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      margin-left: 100px;
+      margin-bottom: 50px;
+      width: 400px;
+      height: 50px;
+      border-left: 5px solid #081752;
+      font-size: 25px;
+      letter-spacing: 1px;
+    }
+    .fantasiaDiary_text {
+      display: flex;
+      width: 10%;
+      height: 10%;
+      background-color: #f3eddc;
+      padding: 20px;
+      margin-left: 100px;
+      margin-bottom: -140px;
+      border-radius: 10px;
+      width: 75%;
+      height: 50%;
+    }
+  }
+  .originalDiary_box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    .originalDiary_title {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      margin-bottom: 50px;
+      width: 400px;
+      height: 50px;
+      border-left: 5px solid #cb0745;
+      font-size: 25px;
+      letter-spacing: 1px;
+      margin-left: 50px;
+    }
+    .originalDiary_text {
+      display: flex;
+      width: 10%;
+      height: 10%;
+      background-color: #f6f6f6;
+      padding: 20px;
+      margin-bottom: -140px;
+      border-radius: 10px;
+      width: 75%;
+      height: 50%;
+      margin-left: 50px;
+    }
+  }
+  .hide_box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #081752;
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    background: transparent;
+    border: 1px solid #E4D097;
+    width: 200px;
+    height: 50px;
+    letter-spacing: 6px;
+    font-size: 20px;
+    font-weight: 200;
+    border-radius: 10px;
+    z-index: 999;
+    color: #E4D097;
+    &:hover {
+      background-color: #E4D097;
+      color: #081752;
+      transition: all ease 0.2s;
+    }
+  }
+`;
+
+const Detail = ({ router }) => {
+  const { editorState } = useSelector((state) => state.user);
 
   const showingDiaryYear = router.query.year;
   const showingDiaryMonth = router.query.month;
   const showingDiaryDate = router.query.date;
 
-  console.log(showingDiaryYear, showingDiaryMonth, showingDiaryDate, router.query.originDiary, router.query.fantasiaDiary)
-
-  const originDiaryText = JSON.parse(editorState);
-
-  console.log(originDiaryText);
+  const originDiaryText = JSON.parse(JSON.stringify(editorState));
 
   const originContentState = convertFromRaw(originDiaryText);
   const originEditorState = EditorState.createWithContent(originContentState);
 
   return (
     <ContentWrapper>
-      <LeftBlockWrapper>
-        <Header />
-      </LeftBlockWrapper>
       <RightBlockWrapper>
         <div className='originalDiary_box'>
           <div className='originalDiary_title'>

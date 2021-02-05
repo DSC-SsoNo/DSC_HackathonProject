@@ -127,7 +127,7 @@ const CalendarBody = styled.div`
 const Calendar = () => {
   const [diaryList, setDiaryList] = useState([]);
 
-  const editorState = useSelector(state => state.editorState);
+  const { editorState } = useSelector((state) => state.user);
 
   console.log(editorState);
 
@@ -211,8 +211,6 @@ const Calendar = () => {
                             Router.push({
                               pathname: `/detail`,
                               query: {
-                                originDiary: `Hello`,
-                                fantasiaDiary: `Hi`,
                                 year: currentYear,
                                 month: currentMonth + 1,
                                 date: processedDate
