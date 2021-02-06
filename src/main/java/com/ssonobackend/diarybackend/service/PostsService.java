@@ -16,18 +16,26 @@ public class PostsService {
 
     @Transactional
     // 저장
-    public String save(PostsSaveRequestDto requestDto) {
+    public Long save(PostsSaveRequestDto requestDto) {
         return postsRepository.save(requestDto.toEntity()).getDate();
     }
 
     @Transactional
     // 수정
-    public String update(String date, PostsUpdateRequestDto requestDto) {
+    public Long update(Long date, PostsUpdateRequestDto requestDto) {
         Journal posts = postsRepository.findById(date)
                 .orElseThrow(() -> new IllegalArgumentException("해당 일정에 일기가 없습니다. date=" + date));
         //
-        posts.update(requestDto.getContent(), requestDto.getEmotion(), requestDto.getDate());
+        posts.update(requestDto.getContents(), requestDto.getEmotion(), requestDto.getDate());
 
         return date;
     }
+//    public PostsResponseDto findById (String date) {
+//        Journal en = postsRepository.findById(date)
+//                .orElseThrow(() -> new IllegalArgumentException("해당 일정에 일기가 없습니다. date=" + date));
+//        //
+//        posts.update(requestDto.getContent(), requestDto.getEmotion(), requestDto.getDate());
+//
+//        return date;
+//    }
 }

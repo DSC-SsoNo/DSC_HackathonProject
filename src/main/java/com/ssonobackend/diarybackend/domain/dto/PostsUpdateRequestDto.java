@@ -8,13 +8,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class PostsUpdateRequestDto {
-    private String content;
+    private String contents;
     private String emotion;
-    private String date;
+    private Long date;
 
     @Builder
-    public PostsUpdateRequestDto(String content, String emotion, String date) {
-        this.content = content;
+    public PostsUpdateRequestDto(String contents, String emotion, Long date) {
+        this.contents = contents;
         this.emotion= emotion;
         this.date = date;
     }
