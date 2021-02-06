@@ -20,7 +20,7 @@ public class JournalApiController {
 
     @ApiOperation(value = "일기 조회", notes = "해당 낧짜에 작성된 일기를 조회합니다.")
     @GetMapping("/diary/{date}")
-    public Journal getDiary(@PathVariable("date") String date) {
+    public Journal getDiary(@PathVariable("date") Long date) {
         return journalService.findByDate(date);
     }
 

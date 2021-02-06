@@ -8,13 +8,13 @@ import lombok.Data;
 @Data
 public class PostsResponseDto {
 
-    private String date;
-    private String content;
+    private Long date;
+    private String contents;
     private String emotion;
 
     public PostsResponseDto(Journal entity) {
         this.date = entity.getDate();
-        this.content = entity.getContents();
+        this.contents = entity.getContents();
         this.emotion = entity.getEmotion();
     }
 }

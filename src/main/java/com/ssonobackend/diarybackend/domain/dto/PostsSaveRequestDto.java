@@ -4,30 +4,29 @@ import com.ssonobackend.diarybackend.domain.Journal;
 
 import lombok.Data;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@Getter
 @NoArgsConstructor
-@Data
-
 public class PostsSaveRequestDto {
-    private String date;
-    private String content;
+    private Long date;
+    private String contents;
     private String emotion;
 
 
     @Builder
-    public PostsSaveRequestDto(String content, String emotion, String data) {
-        this.content = content;
+    public PostsSaveRequestDto(String contents, String emotion, Long date) {
+        this.contents = contents;
         this.emotion = emotion;
         this.date = date;
-
     }
 
     public Journal toEntity() {
         return Journal.builder()
                 .date(date)
                 .emotion(emotion)
-                .contents(content)
+                .contents(contents)
                 .build();
     }
 }

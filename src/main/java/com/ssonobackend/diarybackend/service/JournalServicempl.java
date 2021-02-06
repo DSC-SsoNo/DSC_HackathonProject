@@ -26,7 +26,7 @@ public class JournalServicempl implements JournalService {
     }
 
     @Override
-    public Journal findByDate(String date) {
+    public Journal findByDate(Long date) {
         return journalRepository.findByDate(date);
     }
 }

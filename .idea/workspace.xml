@@ -4,7 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47200768-07ac-4d2f-a6af-5e210e1bc426" name="Default Changelist" comment="" />
+    <list default="true" id="47200768-07ac-4d2f-a6af-5e210e1bc426" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/controller/JournalApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/controller/JournalApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/controller/PostsApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/controller/PostsApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/domain/Journal$JournalBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/domain/Journal$JournalBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/domain/Journal.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/domain/Journal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/domain/dto/PostsResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/domain/dto/PostsResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/domain/dto/PostsSaveRequestDto$PostsSaveRequestDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/domain/dto/PostsSaveRequestDto$PostsSaveRequestDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/domain/dto/PostsSaveRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/domain/dto/PostsSaveRequestDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/domain/dto/PostsUpdateRequestDto$PostsUpdateRequestDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/domain/dto/PostsUpdateRequestDto$PostsUpdateRequestDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/domain/dto/PostsUpdateRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/domain/dto/PostsUpdateRequestDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/repository/JournalRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/repository/JournalRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/repository/PostRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/repository/PostRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/service/JournalService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/service/JournalService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/service/JournalServicempl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/service/JournalServicempl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/service/PostsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ssonobackend/diarybackend/service/PostsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/controller/JournalApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/controller/JournalApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/controller/PostsApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/controller/PostsApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/domain/Journal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/domain/Journal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/domain/dto/PostsSaveRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/domain/dto/PostsSaveRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/repository/JournalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/repository/JournalRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/service/JournalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/service/JournalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/service/JournalServicempl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/service/JournalServicempl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/service/PostsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/service/PostsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ssonobackend/diarybackend/ApiControllerTest.java" beforeDir="false" />
+    </list>
+    <list id="a9f982cc-feff-4463-bf52-8e2af5fde963" name="Changes by thwjd" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/controller/PostsApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/controller/PostsApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/domain/Journal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/domain/Journal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/domain/dto/PostsResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/domain/dto/PostsResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/domain/dto/PostsSaveRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/domain/dto/PostsSaveRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/domain/dto/PostsUpdateRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/domain/dto/PostsUpdateRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/service/PostsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/service/PostsService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +72,44 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/controller/PostsApiController.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="a9f982cc-feff-4463-bf52-8e2af5fde963" />
+        <range start1="15" end1="16" start2="16" end2="17" changelist="47200768-07ac-4d2f-a6af-5e210e1bc426" />
+        <range start1="20" end1="21" start2="21" end2="22" changelist="47200768-07ac-4d2f-a6af-5e210e1bc426" />
+        <range start1="23" end1="29" start2="24" end2="29" changelist="47200768-07ac-4d2f-a6af-5e210e1bc426" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/domain/dto/PostsSaveRequestDto.java">
+      <ranges>
+        <range start1="6" end1="6" start2="6" end2="7" changelist="a9f982cc-feff-4463-bf52-8e2af5fde963" />
+        <range start1="8" end1="8" start2="9" end2="10" changelist="a9f982cc-feff-4463-bf52-8e2af5fde963" />
+        <range start1="9" end1="11" start2="11" end2="11" changelist="a9f982cc-feff-4463-bf52-8e2af5fde963" />
+        <range start1="12" end1="14" start2="12" end2="14" changelist="a9f982cc-feff-4463-bf52-8e2af5fde963" />
+        <range start1="18" end1="20" start2="18" end2="20" changelist="47200768-07ac-4d2f-a6af-5e210e1bc426" />
+        <range start1="22" end1="23" start2="22" end2="22" changelist="47200768-07ac-4d2f-a6af-5e210e1bc426" />
+        <range start1="29" end1="30" start2="28" end2="29" changelist="a9f982cc-feff-4463-bf52-8e2af5fde963" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/domain/Journal.java">
+      <ranges>
+        <range start1="7" end1="7" start2="7" end2="8" changelist="47200768-07ac-4d2f-a6af-5e210e1bc426" />
+        <range start1="8" end1="11" start2="9" end2="10" changelist="47200768-07ac-4d2f-a6af-5e210e1bc426" />
+        <range start1="20" end1="21" start2="19" end2="22" changelist="a9f982cc-feff-4463-bf52-8e2af5fde963" />
+        <range start1="29" end1="30" start2="30" end2="31" changelist="47200768-07ac-4d2f-a6af-5e210e1bc426" />
+        <range start1="38" end1="39" start2="39" end2="40" changelist="47200768-07ac-4d2f-a6af-5e210e1bc426" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/com/ssonobackend/diarybackend/service/PostsService.java">
+      <ranges>
+        <range start1="18" end1="19" start2="18" end2="19" changelist="a9f982cc-feff-4463-bf52-8e2af5fde963" />
+        <range start1="24" end1="25" start2="24" end2="25" changelist="47200768-07ac-4d2f-a6af-5e210e1bc426" />
+        <range start1="28" end1="29" start2="28" end2="29" changelist="a9f982cc-feff-4463-bf52-8e2af5fde963" />
+        <range start1="32" end1="32" start2="32" end2="40" changelist="a9f982cc-feff-4463-bf52-8e2af5fde963" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectId" id="1o40lp2eeKOWzKdlYtDZUEni8FD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -37,13 +117,29 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DiaryBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="diary-backend.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ssonobackend.diarybackend.DiaryBackendApplication" />
@@ -61,11 +157,22 @@
       <option name="presentableId" value="Default" />
       <updated>1612530708984</updated>
       <workItem from="1612530712783" duration="13000" />
-      <workItem from="1612567337860" duration="19000" />
+      <workItem from="1612567337860" duration="5738000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
